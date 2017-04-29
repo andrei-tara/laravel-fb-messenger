@@ -9,5 +9,6 @@ return [
         Casperlaitw\LaravelFbMessenger\Contracts\DefaultHandler::class
     ],
     'custom_url' => '/webhook',
+    'enable_postback' => true,
     'postbacks' => [],
 ];
