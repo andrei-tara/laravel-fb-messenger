@@ -133,14 +133,18 @@ class WebhookHandler
         $postbackKeys = array_keys($this->postbacks);
         $this->messages->each(function (ReceiveMessage $message) use ($postbackKeys) {
             $this->autoTypeHandle($message);
-            if ($message->isPayload()) {
-                foreach ($postbackKeys as $postbackKey) {
-                    if (preg_match("/$postbackKey/", $message->getPostback())) {
-                        $this->postbacks[$postbackKey]->handle($message);
-                        break;
+            
+            $enablePostback = $this->config->get('fb-messenger.enable_postback');
+            if($enablePostback) {
+                if ($message->isPayload()) {
+                    foreach ($postbackKeys as $postbackKey) {
+                        if (preg_match("/$postbackKey/", $message->getPostback())) {
+                            $this->postbacks[$postbackKey]->handle($message);
+                            break;
+                        }
                     }
-                }
                 return;
+                }
             }
 
             foreach ($this->handlers as $handler) {
