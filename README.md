@@ -14,7 +14,7 @@ Easy to making your facebook messenger chatbot.
 ### Composer
 
 ```shell
-composer require andrei-tara/laravel-fb-messenger
+composer require casperlaitw/laravel-fb-messenger
 ```
 
 ## Laravel
@@ -84,6 +84,7 @@ Finally, you can run `php artisan route:list` to check.
      'auto_typing' => true,
      'handlers' => [App\DefaultHandler::class],
      'custom_url' => '/chatbot', // like this
+     'enable_postback' => true,// use postbacks
      'postbacks' => [],
  ];
 ```
