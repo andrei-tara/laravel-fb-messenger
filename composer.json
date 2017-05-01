@@ -1,5 +1,5 @@
 {
-    "name": "casperlaitw/laravel-fb-messenger",
+    "name": "andrei-tara/laravel-fb-messenger",
     "type": "library",
     "description": "A Laravel Package to Integrate Facebook Messenger API",
     "keywords": [
@@ -8,12 +8,17 @@
         "chatbot",
         "laravel"
     ],
-    "homepage": "https://github.com/casperlaitw/laravel-fb-messenger",
+    "homepage": "https://github.com/andrei-tara/laravel-fb-messenger",
     "license": "MIT",
     "authors": [
         {
             "name": "Casper Lai",
             "email": "casper.lai@sleepingdesign.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Andrei Tara",
+            "email": "hello@andreitara.com",
             "role": "Developer"
         }
     ],
